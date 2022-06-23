@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<SL_AttackSkill xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Target_ItemID>8300063</Target_ItemID>
+  <New_ItemID>-27002</New_ItemID>
+  <Name>Healing Light</Name>
+  <Description>Release motes of healing light into the world. The light seeks to find allies to aid.</Description>
+  <LegacyItemID>-1</LegacyItemID>
+  <IsPickable>false</IsPickable>
+  <IsUsable>false</IsUsable>
+  <QtyRemovedOnUse>0</QtyRemovedOnUse>
+  <GroupItemInDisplay>false</GroupItemInDisplay>
+  <HasPhysicsWhenWorld>false</HasPhysicsWhenWorld>
+  <RepairedInRest>true</RepairedInRest>
+  <BehaviorOnNoDurability>NotSet</BehaviorOnNoDurability>
+  <CastType>Normal</CastType>
+  <CastModifier>Immobilized</CastModifier>
+  <CastLocomotionEnabled>false</CastLocomotionEnabled>
+  <MobileCastMovementMult>-1</MobileCastMovementMult>
+  <CastSheatheRequired>1</CastSheatheRequired>
+  <OverrideSellModifier>-1</OverrideSellModifier>
+  <Tags />
+  <ExtensionsEditBehaviour>NONE</ExtensionsEditBehaviour>
+  <ItemExtensions />
+  <EffectBehaviour>Destroy</EffectBehaviour>
+  <EffectTransforms>
+    <SL_EffectTransform>
+      <TransformName>ActivationEffects</TransformName>
+      <Position xsi:nil="true" />
+      <Rotation xsi:nil="true" />
+      <Scale xsi:nil="true" />
+      <Effects>
+        <SL_Effect xsi:type="SL_PlaySoundEffect">
+          <Delay>0</Delay>
+          <SyncType>OwnerSync</SyncType>
+          <OverrideCategory>None</OverrideCategory>
+          <Sounds>
+            <Sounds>SFX_SKILL_SkyChime_NurturingEcho_Dance</Sounds>
+          </Sounds>
+          <Follow>false</Follow>
+          <MinPitch>1</MinPitch>
+          <MaxPitch>1</MaxPitch>
+        </SL_Effect>
+      </Effects>
+      <EffectConditions />
+      <ChildEffects />
+    </SL_EffectTransform>
+    <SL_EffectTransform>
+      <TransformName>Effects</TransformName>
+      <Position xsi:nil="true" />
+      <Rotation xsi:nil="true" />
+      <Scale xsi:nil="true" />
+      <Effects>
+        <SL_Effect xsi:type="SL_ShootProjectile">
+          <Delay>0</Delay>
+          <SyncType>OwnerSync</SyncType>
+          <OverrideCategory>None</OverrideCategory>
+          <CastPosition>Local</CastPosition>
+          <LocalPositionAdd>
+            <x>0</x>
+            <y>3.2</y>
+            <z>-0.5</z>
+          </LocalPositionAdd>
+          <NoAim>false</NoAim>
+          <TargetType>Allies</TargetType>
+          <TransformName>ShooterTransform</TransformName>
+          <BaseProjectile>ChimesProjectile</BaseProjectile>
+          <ProjectileShots>
+            <SL_ProjectileShot>
+              <LocalDirectionOffset>
+                <x>0</x>
+                <y>1</y>
+                <z>0</z>
+              </LocalDirectionOffset>
+              <LockDirection>
+                <x>-999</x>
+                <y>-999</y>
+                <z>-999</z>
+              </LockDirection>
+              <MustShoot>false</MustShoot>
+              <NoBaseDir>false</NoBaseDir>
+              <RandomLocalDirectionAdd>
+                <x>0</x>
+                <y>0</y>
+                <z>0</z>
+              </RandomLocalDirectionAdd>
+            </SL_ProjectileShot>
+            <SL_ProjectileShot>
+              <LocalDirectionOffset>
+                <x>0</x>
+                <y>0</y>
+                <z>0</z>
+              </LocalDirectionOffset>
+              <LockDirection>
+                <x>-999</x>
+                <y>-999</y>
+                <z>-999</z>
+              </LockDirection>
+              <MustShoot>false</MustShoot>
+              <NoBaseDir>false</NoBaseDir>
+              <RandomLocalDirectionAdd>
+                <x>0</x>
+                <y>0</y>
+                <z>0</z>
+              </RandomLocalDirectionAdd>
+            </SL_ProjectileShot>
+            <SL_ProjectileShot>
+              <LocalDirectionOffset>
+                <x>0</x>
+                <y>1.5</y>
+                <z>0</z>
+              </LocalDirectionOffset>
+              <LockDirection>
+                <x>-999</x>
+                <y>-999</y>
+                <z>-999</z>
+              </LockDirection>
+              <MustShoot>false</MustShoot>
+              <NoBaseDir>false</NoBaseDir>
+              <RandomLocalDirectionAdd>
+                <x>0</x>
+                <y>0</y>
+                <z>0</z>
+              </RandomLocalDirectionAdd>
+            </SL_ProjectileShot>
+            <SL_ProjectileShot>
+              <LocalDirectionOffset>
+                <x>0</x>
+                <y>1.5</y>
+                <z>0</z>
+              </LocalDirectionOffset>
+              <LockDirection>
+                <x>-999</x>
+                <y>-999</y>
+                <z>-999</z>
+              </LockDirection>
+              <MustShoot>false</MustShoot>
+              <NoBaseDir>false</NoBaseDir>
+              <RandomLocalDirectionAdd>
+                <x>0</x>
+                <y>0</y>
+                <z>0</z>
+              </RandomLocalDirectionAdd>
+            </SL_ProjectileShot>
+          </ProjectileShots>
+          <InstantiatedAmount>8</InstantiatedAmount>
+          <Lifespan>10</Lifespan>
+          <LateShootTime>0.1</LateShootTime>
+          <Unblockable>true</Unblockable>
+          <EffectsOnlyIfHitCharacter>true</EffectsOnlyIfHitCharacter>
+          <EndMode>Normal</EndMode>
+          <DisableOnHit>false</DisableOnHit>
+          <IgnoreShooterCollision>false</IgnoreShooterCollision>
+          <TargetingMode>FindAllies</TargetingMode>
+          <TargetCountPerProjectile>1</TargetCountPerProjectile>
+          <TargetRange>50</TargetRange>
+          <AutoTarget>false</AutoTarget>
+          <AutoTargetMaxAngle>360</AutoTargetMaxAngle>
+          <AutoTargetRange>50</AutoTargetRange>
+          <ProjectileForce>8</ProjectileForce>
+          <AddDirection>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+          </AddDirection>
+          <AddRotationForce>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+          </AddRotationForce>
+          <YMagnitudeAffect>0</YMagnitudeAffect>
+          <YMagnitudeForce>0</YMagnitudeForce>
+          <DefenseLength>0</DefenseLength>
+          <DefenseRange>0</DefenseRange>
+          <CameraAddYDirection>0</CameraAddYDirection>
+          <ImpactSoundMaterial>Fire</ImpactSoundMaterial>
+          <LightIntensityFade>
+            <x>10</x>
+            <y>2</y>
+          </LightIntensityFade>
+          <PointOffset>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+          </PointOffset>
+          <TrailEnabled>false</TrailEnabled>
+          <TrailTime>0.075</TrailTime>
+          <EffectBehaviour>Destroy</EffectBehaviour>
+          <ProjectileEffects>
+            <SL_EffectTransform>
+              <TransformName>HitEffects</TransformName>
+              <Position xsi:nil="true" />
+              <Rotation xsi:nil="true" />
+              <Scale xsi:nil="true" />
+              <Effects>
+                <SL_Effect xsi:type="SL_AffectHealth">
+                  <Delay>0</Delay>
+                  <SyncType>OwnerSync</SyncType>
+                  <OverrideCategory>None</OverrideCategory>
+                  <AffectQuantity>30</AffectQuantity>
+                  <IsModifier>false</IsModifier>
+                  <AffectQuantityAI>-99999</AffectQuantityAI>
+                  <InformSourceCharacter>false</InformSourceCharacter>
+                </SL_Effect>
+                <SL_Effect xsi:type="SL_AffectBurntHealth">
+                  <Delay>0</Delay>
+                  <SyncType>OwnerSync</SyncType>
+                  <OverrideCategory>None</OverrideCategory>
+                  <AffectQuantity>15</AffectQuantity>
+                  <IsModifier>false</IsModifier>
+                </SL_Effect>
+              </Effects>
+              <EffectConditions />
+              <ChildEffects />
+            </SL_EffectTransform>
+          </ProjectileEffects>
+        </SL_Effect>
+      </Effects>
+      <EffectConditions />
+      <ChildEffects />
+    </SL_EffectTransform>
+  </EffectTransforms>
+  <Cooldown>10</Cooldown>
+  <StaminaCost>0</StaminaCost>
+  <ManaCost>20</ManaCost>
+  <DurabilityCost>0</DurabilityCost>
+  <DurabilityCostPercent>0</DurabilityCostPercent>
+  <VFXOnStart>true</VFXOnStart>
+  <StopStartVFXOnEnd>false</StopStartVFXOnEnd>
+  <StartVFX xsi:nil="true" />
+  <RequiredItems />
+  <HealthCost>0</HealthCost>
+  <RequiredPlayerType>Normal</RequiredPlayerType>
+  <AmmunitionTypes />
+  <RequiredOffHandTypes />
+  <RequiredWeaponTypes />
+  <RequiredWeaponTags />
+  <RequireImbue>false</RequireImbue>
+  <AmmunitionAmount xsi:nil="true" />
+</SL_AttackSkill>

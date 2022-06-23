@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<SL_Skill xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Target_ItemID>8201029</Target_ItemID>
+  <New_ItemID>8201029</New_ItemID>
+  <LegacyItemID xsi:nil="true" />
+  <IsPickable xsi:nil="true" />
+  <IsUsable xsi:nil="true" />
+  <QtyRemovedOnUse xsi:nil="true" />
+  <GroupItemInDisplay xsi:nil="true" />
+  <HasPhysicsWhenWorld xsi:nil="true" />
+  <RepairedInRest xsi:nil="true" />
+  <BehaviorOnNoDurability xsi:nil="true" />
+  <CastType xsi:nil="true" />
+  <CastModifier xsi:nil="true" />
+  <CastLocomotionEnabled xsi:nil="true" />
+  <MobileCastMovementMult xsi:nil="true" />
+  <CastSheatheRequired xsi:nil="true" />
+  <OverrideSellModifier xsi:nil="true" />
+  <ExtensionsEditBehaviour>NONE</ExtensionsEditBehaviour>
+  <EffectBehaviour>NONE</EffectBehaviour>
+  <EffectTransforms>
+    <SL_EffectTransform>
+      <TransformName>Effects</TransformName>
+      <Position xsi:nil="true" />
+      <Rotation xsi:nil="true" />
+      <Scale xsi:nil="true" />
+      <Effects>
+        <SL_Effect xsi:type="SL_ShootBlast">
+          <Delay>0</Delay>
+          <SyncType>OwnerSync</SyncType>
+          <OverrideCategory>None</OverrideCategory>
+          <CastPosition>Local</CastPosition>
+          <LocalPositionAdd>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+          </LocalPositionAdd>
+          <NoAim>false</NoAim>
+          <TargetType>Allies</TargetType>
+          <TransformName>ShooterTransform</TransformName>
+          <BaseBlast>DrumHealBlast</BaseBlast>
+          <Radius>6</Radius>
+          <RefreshTime>0.1</RefreshTime>
+          <BlastLifespan>0</BlastLifespan>
+          <InstantiatedAmount>1</InstantiatedAmount>
+          <Interruptible>false</Interruptible>
+          <MaxHitTargetCount>-1</MaxHitTargetCount>
+          <AffectHitTargetCenter>true</AffectHitTargetCenter>
+          <HitOnShoot>true</HitOnShoot>
+          <IgnoreShooter>true</IgnoreShooter>
+          <IgnoreStop>false</IgnoreStop>
+          <NoTargetForwardMultiplier>0</NoTargetForwardMultiplier>
+          <ParentToShootTransform>false</ParentToShootTransform>
+          <UseTargetCharacterPositionType>false</UseTargetCharacterPositionType>
+          <ImpactSoundMaterial>Fire</ImpactSoundMaterial>
+          <DontPlayHitSound>false</DontPlayHitSound>
+          <FXIsWorld>false</FXIsWorld>
+          <PlaySounOnRefresh>false</PlaySounOnRefresh>
+          <DelayFirstShoot>-1</DelayFirstShoot>
+          <PlayFXOnRefresh>false</PlayFXOnRefresh>
+          <EffectBehaviour>Destroy</EffectBehaviour>
+          <BlastEffects>
+            <SL_EffectTransform>
+              <TransformName>Effects</TransformName>
+              <Position xsi:nil="true" />
+              <Rotation xsi:nil="true" />
+              <Scale xsi:nil="true" />
+              <Effects>
+                <SL_Effect xsi:type="SL_AffectCorruption">
+                  <Delay>0</Delay>
+                  <SyncType>OwnerSync</SyncType>
+                  <OverrideCategory>None</OverrideCategory>
+                  <AffectQuantity>-300</AffectQuantity>
+                  <IsRaw>true</IsRaw>
+                </SL_Effect>
+                <SL_Effect xsi:type="SL_PunctualDamage">
+                  <Delay>0</Delay>
+                  <SyncType>OwnerSync</SyncType>
+                  <OverrideCategory>None</OverrideCategory>
+                  <Damage>
+                    <SL_Damage>
+                      <Damage>65</Damage>
+                      <Type>Decay</Type>
+                    </SL_Damage>
+                  </Damage>
+                  <Damages_AI />
+                  <Knockback>0</Knockback>
+                  <HitInventory>false</HitInventory>
+                  <IgnoreHalfResistances>false</IgnoreHalfResistances>
+                </SL_Effect>
+                <SL_Effect xsi:type="SL_AddStatusEffect">
+                  <Delay>0</Delay>
+                  <SyncType>OwnerSync</SyncType>
+                  <OverrideCategory>None</OverrideCategory>
+                  <StatusEffect>Bleeding +</StatusEffect>
+                  <ChanceToContract>100</ChanceToContract>
+                  <AffectController>false</AffectController>
+                  <AdditionalLevel>0</AdditionalLevel>
+                  <NoDealer>false</NoDealer>
+                </SL_Effect>
+              </Effects>
+              <EffectConditions />
+              <ChildEffects />
+            </SL_EffectTransform>
+          </BlastEffects>
+        </SL_Effect>
+        <SL_Effect xsi:type="SL_AffectCorruption">
+          <Delay>0</Delay>
+          <SyncType>OwnerSync</SyncType>
+          <OverrideCategory>None</OverrideCategory>
+          <AffectQuantity>-300</AffectQuantity>
+          <IsRaw>true</IsRaw>
+        </SL_Effect>
+        <SL_Effect xsi:type="SL_PunctualDamage">
+          <Delay>0</Delay>
+          <SyncType>OwnerSync</SyncType>
+          <OverrideCategory>None</OverrideCategory>
+          <Damage>
+            <SL_Damage>
+              <Damage>65</Damage>
+              <Type>Decay</Type>
+            </SL_Damage>
+          </Damage>
+          <Damages_AI />
+          <Knockback>0</Knockback>
+          <HitInventory>false</HitInventory>
+          <IgnoreHalfResistances>false</IgnoreHalfResistances>
+        </SL_Effect>
+        <SL_Effect xsi:type="SL_AddStatusEffect">
+          <Delay>0</Delay>
+          <SyncType>OwnerSync</SyncType>
+          <OverrideCategory>None</OverrideCategory>
+          <StatusEffect>Bleeding +</StatusEffect>
+          <ChanceToContract>100</ChanceToContract>
+          <AffectController>false</AffectController>
+          <AdditionalLevel>0</AdditionalLevel>
+          <NoDealer>false</NoDealer>
+        </SL_Effect>
+        <SL_Effect xsi:type="SL_PlaySoundEffect">
+          <Delay>0.1</Delay>
+          <SyncType>OwnerSync</SyncType>
+          <OverrideCategory>None</OverrideCategory>
+          <Sounds>
+            <Sounds>SFX_SKILL_DrumSkill_NurturingEcho_Dance</Sounds>
+          </Sounds>
+          <Follow>false</Follow>
+          <MinPitch>0</MinPitch>
+          <MaxPitch>0</MaxPitch>
+        </SL_Effect>
+        <SL_Effect xsi:type="SL_CreateItemEffect">
+          <Delay>0</Delay>
+          <SyncType>OwnerSync</SyncType>
+          <OverrideCategory>None</OverrideCategory>
+          <ItemToCreate>6500031</ItemToCreate>
+          <Quantity>1</Quantity>
+        </SL_Effect>
+      </Effects>
+      <EffectConditions>
+        <SL_EffectCondition xsi:type="SL_ProximityCondition">
+          <Invert>false</Invert>
+          <RequiredItems>
+            <SkillItemReq>
+              <ItemID>-27001</ItemID>
+              <Quantity>1</Quantity>
+              <Consume>false</Consume>
+            </SkillItemReq>
+          </RequiredItems>
+          <MaxDistance>2.25</MaxDistance>
+          <Offset>
+            <x>0</x>
+            <y>-0.5</y>
+            <z>0</z>
+          </Offset>
+          <ProximityAngle>-1</ProximityAngle>
+          <OrMode>false</OrMode>
+        </SL_EffectCondition>
+      </EffectConditions>
+      <ChildEffects />
+    </SL_EffectTransform>
+  </EffectTransforms>
+  <Cooldown xsi:nil="true" />
+  <StaminaCost xsi:nil="true" />
+  <ManaCost xsi:nil="true" />
+  <DurabilityCost xsi:nil="true" />
+  <DurabilityCostPercent xsi:nil="true" />
+  <VFXOnStart xsi:nil="true" />
+  <StopStartVFXOnEnd xsi:nil="true" />
+  <StartVFX xsi:nil="true" />
+  <HealthCost xsi:nil="true" />
+  <RequiredPlayerType xsi:nil="true" />
+</SL_Skill>

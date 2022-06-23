@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<SL_StatusEffect xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <TargetStatusIdentifier>Health Recovery Small</TargetStatusIdentifier>
+  <NewStatusID>-27003</NewStatusID>
+  <StatusIdentifier>com.kero.status.rejuvenation</StatusIdentifier>
+  <Name>Rejuvenation</Name>
+  <Description>Recover [E1V1] Health per second.</Description>
+  <Lifespan>15</Lifespan>
+  <RefreshRate>1</RefreshRate>
+  <Purgeable>false</Purgeable>
+  <Priority>5</Priority>
+  <IgnoreBarrier>false</IgnoreBarrier>
+  <BuildupRecoverySpeed>3</BuildupRecoverySpeed>
+  <IgnoreBuildupIfApplied>false</IgnoreBuildupIfApplied>
+  <AmplifiedStatusIdentifier />
+  <RemoveRequiredStatus>false</RemoveRequiredStatus>
+  <NormalizeDamageDisplay>false</NormalizeDamageDisplay>
+  <DisplayedInHUD>true</DisplayedInHUD>
+  <IsHidden>false</IsHidden>
+  <IsMalusEffect>false</IsMalusEffect>
+  <DelayedDestroyTime>0</DelayedDestroyTime>
+  <ActionOnHit>None</ActionOnHit>
+  <FamilyMode>Reference</FamilyMode>
+  <BindFamily>
+    <Name>Rejuvination</Name>
+    <StackBehaviour xsi:nil="true" />
+    <MaxStackCount>-1</MaxStackCount>
+    <LengthType xsi:nil="true" />
+  </BindFamily>
+  <ReferenceFamilyUID>_u1rzVWldk6WQ6gCPYbSeA</ReferenceFamilyUID>
+  <PlayFXOnActivation>true</PlayFXOnActivation>
+  <FXOffset>
+    <x>0</x>
+    <y>0</y>
+    <z>0</z>
+  </FXOffset>
+  <VFXInstantiationType>None</VFXInstantiationType>
+  <VFXPrefab xsi:nil="true" />
+  <SpecialSFX>NONE</SpecialSFX>
+  <PlaySpecialFXOnStop>false</PlaySpecialFXOnStop>
+  <EffectBehaviour>Destroy</EffectBehaviour>
+  <Effects>
+    <SL_EffectTransform>
+      <TransformName>Normal</TransformName>
+      <Position xsi:nil="true" />
+      <Rotation xsi:nil="true" />
+      <Scale xsi:nil="true" />
+      <Effects>
+        <SL_Effect xsi:type="SL_AffectHealth">
+          <Delay>0</Delay>
+          <SyncType>OwnerSync</SyncType>
+          <OverrideCategory>None</OverrideCategory>
+          <AffectQuantity>2</AffectQuantity>
+          <IsModifier>false</IsModifier>
+          <AffectQuantityAI>-99999</AffectQuantityAI>
+          <InformSourceCharacter>false</InformSourceCharacter>
+        </SL_Effect>
+      </Effects>
+      <EffectConditions />
+      <ChildEffects />
+    </SL_EffectTransform>
+  </Effects>
+</SL_StatusEffect>

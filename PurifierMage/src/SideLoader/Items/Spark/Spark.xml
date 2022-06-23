@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<SL_AttackSkill xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Target_ItemID>8200040</Target_ItemID>
+  <New_ItemID>8200040</New_ItemID>
+  <LegacyItemID xsi:nil="true" />
+  <IsPickable xsi:nil="true" />
+  <IsUsable xsi:nil="true" />
+  <QtyRemovedOnUse xsi:nil="true" />
+  <GroupItemInDisplay xsi:nil="true" />
+  <HasPhysicsWhenWorld xsi:nil="true" />
+  <RepairedInRest xsi:nil="true" />
+  <BehaviorOnNoDurability xsi:nil="true" />
+  <CastType xsi:nil="true" />
+  <CastModifier xsi:nil="true" />
+  <CastLocomotionEnabled xsi:nil="true" />
+  <MobileCastMovementMult xsi:nil="true" />
+  <CastSheatheRequired xsi:nil="true" />
+  <OverrideSellModifier xsi:nil="true" />
+  <ExtensionsEditBehaviour>NONE</ExtensionsEditBehaviour>
+  <EffectBehaviour>NONE</EffectBehaviour>
+  <EffectTransforms>
+    <SL_EffectTransform>
+      <TransformName>Spark of Life</TransformName>
+      <Position xsi:nil="true" />
+      <Rotation xsi:nil="true" />
+      <Scale xsi:nil="true" />
+      <Effects />
+      <EffectConditions />
+      <ChildEffects>
+        <SL_EffectTransform>
+          <TransformName>ExtraEffects</TransformName>
+          <Position xsi:nil="true" />
+          <Rotation xsi:nil="true" />
+          <Scale xsi:nil="true" />
+          <Effects>
+            <SL_Effect xsi:type="SL_AffectHealth">
+              <Delay>0</Delay>
+              <SyncType>OwnerSync</SyncType>
+              <OverrideCategory>None</OverrideCategory>
+              <AffectQuantity>20</AffectQuantity>
+              <IsModifier>true</IsModifier>
+              <AffectQuantityAI>0</AffectQuantityAI>
+              <InformSourceCharacter>false</InformSourceCharacter>
+            </SL_Effect>
+            <SL_Effect xsi:type="SL_PlaySoundEffect">
+              <Delay>0</Delay>
+              <SyncType>OwnerSync</SyncType>
+              <OverrideCategory>None</OverrideCategory>
+              <Sounds>
+                <Sounds>SFX_SKILL_BoonSpell</Sounds>
+              </Sounds>
+              <Follow>false</Follow>
+              <MinPitch>1</MinPitch>
+              <MaxPitch>1</MaxPitch>
+            </SL_Effect>
+            <SL_Effect xsi:type="SL_PlayVFX">
+              <Delay>0</Delay>
+              <SyncType>OwnerSync</SyncType>
+              <OverrideCategory>None</OverrideCategory>
+              <VFXPrefab>VFX_RunicHeal</VFXPrefab>
+              <HitPos>false</HitPos>
+              <ParentMode>This</ParentMode>
+              <DontInstantiateNew>false</DontInstantiateNew>
+            </SL_Effect>
+          </Effects>
+          <EffectConditions>
+            <SL_EffectCondition xsi:type="SL_ProximityCondition">
+              <Invert>false</Invert>
+              <RequiredItems>
+                <SkillItemReq>
+                  <ItemID>-27001</ItemID>
+                  <Quantity>1</Quantity>
+                  <Consume>false</Consume>
+                </SkillItemReq>
+              </RequiredItems>
+              <MaxDistance>2</MaxDistance>
+              <Offset>
+                <x>0</x>
+                <y>-0.5</y>
+                <z>0</z>
+              </Offset>
+              <ProximityAngle>-1</ProximityAngle>
+              <OrMode>false</OrMode>
+            </SL_EffectCondition>
+          </EffectConditions>
+          <ChildEffects />
+        </SL_EffectTransform>
+      </ChildEffects>
+    </SL_EffectTransform>
+  </EffectTransforms>
+  <Cooldown xsi:nil="true" />
+  <StaminaCost xsi:nil="true" />
+  <ManaCost xsi:nil="true" />
+  <DurabilityCost>0</DurabilityCost>
+  <DurabilityCostPercent>0</DurabilityCostPercent>
+  <VFXOnStart>true</VFXOnStart>
+  <StopStartVFXOnEnd>false</StopStartVFXOnEnd>
+  <StartVFX xsi:nil="true" />
+  <RequiredItems />
+  <HealthCost>0</HealthCost>
+  <RequiredPlayerType>Normal</RequiredPlayerType>
+  <AmmunitionTypes />
+  <RequiredOffHandTypes />
+  <RequiredWeaponTypes />
+  <RequiredWeaponTags />
+  <RequireImbue>false</RequireImbue>
+  <AmmunitionAmount xsi:nil="true" />
+</SL_AttackSkill>

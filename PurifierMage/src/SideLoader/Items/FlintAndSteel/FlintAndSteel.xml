@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<SL_Item xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Target_ItemID>5600010</Target_ItemID>
+  <New_ItemID>5600010</New_ItemID>
+  <LegacyItemID xsi:nil="true" />
+  <IsPickable xsi:nil="true" />
+  <IsUsable xsi:nil="true" />
+  <QtyRemovedOnUse xsi:nil="true" />
+  <GroupItemInDisplay xsi:nil="true" />
+  <HasPhysicsWhenWorld xsi:nil="true" />
+  <RepairedInRest xsi:nil="true" />
+  <BehaviorOnNoDurability xsi:nil="true" />
+  <CastType xsi:nil="true" />
+  <CastModifier xsi:nil="true" />
+  <CastLocomotionEnabled xsi:nil="true" />
+  <MobileCastMovementMult xsi:nil="true" />
+  <CastSheatheRequired xsi:nil="true" />
+  <OverrideSellModifier xsi:nil="true" />
+  <ExtensionsEditBehaviour>NONE</ExtensionsEditBehaviour>
+  <EffectBehaviour>NONE</EffectBehaviour>
+  <EffectTransforms>
+    <SL_EffectTransform>
+      <TransformName>PurifyingFlames</TransformName>
+      <Position xsi:nil="true" />
+      <Rotation xsi:nil="true" />
+      <Scale xsi:nil="true" />
+      <ChildEffects>
+        <SL_EffectTransform>
+          <TransformName>ExtraEffects</TransformName>
+          <Position xsi:nil="true" />
+          <Rotation xsi:nil="true" />
+          <Scale xsi:nil="true" />
+          <Effects>
+            <SL_Effect xsi:type="SL_ShootBlast">
+              <Delay>0</Delay>
+              <SyncType>OwnerSync</SyncType>
+              <OverrideCategory>None</OverrideCategory>
+              <CastPosition>Local</CastPosition>
+              <LocalPositionAdd>
+                <x>0</x>
+                <y>0</y>
+                <z>0</z>
+              </LocalPositionAdd>
+              <NoAim>false</NoAim>
+              <TargetType>Allies</TargetType>
+              <TransformName>ShooterTransform</TransformName>
+              <BaseBlast>FireWall</BaseBlast>
+              <Radius>0</Radius>
+              <RefreshTime>0</RefreshTime>
+              <BlastLifespan>0</BlastLifespan>
+              <InstantiatedAmount>0</InstantiatedAmount>
+              <Interruptible>false</Interruptible>
+              <MaxHitTargetCount>-1</MaxHitTargetCount>
+              <AffectHitTargetCenter>false</AffectHitTargetCenter>
+              <HitOnShoot>false</HitOnShoot>
+              <IgnoreShooter>false</IgnoreShooter>
+              <IgnoreStop>false</IgnoreStop>
+              <NoTargetForwardMultiplier>0</NoTargetForwardMultiplier>
+              <ParentToShootTransform>false</ParentToShootTransform>
+              <UseTargetCharacterPositionType>false</UseTargetCharacterPositionType>
+              <ImpactSoundMaterial>Fire</ImpactSoundMaterial>
+              <DontPlayHitSound>false</DontPlayHitSound>
+              <FXIsWorld>false</FXIsWorld>
+              <PlaySounOnRefresh>false</PlaySounOnRefresh>
+              <DelayFirstShoot>-1</DelayFirstShoot>
+              <PlayFXOnRefresh>false</PlayFXOnRefresh>
+              <EffectBehaviour>Destroy</EffectBehaviour>
+              <BlastEffects>
+                <SL_EffectTransform>
+                  <TransformName>Effects</TransformName>
+                  <Position xsi:nil="true" />
+                  <Rotation xsi:nil="true" />
+                  <Scale xsi:nil="true" />
+                  <Effects>
+                    <SL_Effect xsi:type="SL_RemoveStatusEffect">
+                      <Delay>0</Delay>
+                      <SyncType>OwnerSync</SyncType>
+                      <OverrideCategory>None</OverrideCategory>
+                      <CleanseType>NegativeStatuses</CleanseType>
+                    </SL_Effect>
+                    <SL_Effect xsi:type="SL_RemoveStatusEffect">
+                      <Delay>0</Delay>
+                      <SyncType>OwnerSync</SyncType>
+                      <OverrideCategory>None</OverrideCategory>
+                      <CleanseType>StatusFamily</CleanseType>
+                      <SelectorValue>Bleed</SelectorValue>
+                    </SL_Effect>
+                  </Effects>
+                </SL_EffectTransform>
+              </BlastEffects>
+            </SL_Effect>
+          </Effects>
+          <EffectConditions>
+            <SL_EffectCondition xsi:type="SL_ProximityCondition">
+              <Invert>false</Invert>
+              <RequiredItems>
+                <SkillItemReq>
+                  <ItemID>-27001</ItemID>
+                  <Quantity>1</Quantity>
+                  <Consume>false</Consume>
+                </SkillItemReq>
+              </RequiredItems>
+              <MaxDistance>2.25</MaxDistance>
+              <Offset>
+                <x>0</x>
+                <y>-0.5</y>
+                <z>0</z>
+              </Offset>
+              <ProximityAngle>-1</ProximityAngle>
+              <OrMode>false</OrMode>
+            </SL_EffectCondition>
+          </EffectConditions>
+        </SL_EffectTransform>
+      </ChildEffects>
+    </SL_EffectTransform>
+  </EffectTransforms>
+</SL_Item>

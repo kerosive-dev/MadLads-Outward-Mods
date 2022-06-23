@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<SL_Skill xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Target_ItemID>8201060</Target_ItemID>
+  <New_ItemID>-27006</New_ItemID>
+  <Name>Cleansing Ritual</Name>
+  <Description>Required: At least one Ritual Herbs in inventory.
+
+Performs a cleansing ritual to cleanse yourself and nearby allies of negative status effects.
+
+Ritual Herbs (Survival Crafting): Occult Remains, Blood Mushroom, Gaberries, Crabeye Seeds</Description>
+  <LegacyItemID>-1</LegacyItemID>
+  <IsPickable>false</IsPickable>
+  <IsUsable>false</IsUsable>
+  <QtyRemovedOnUse>1</QtyRemovedOnUse>
+  <GroupItemInDisplay>false</GroupItemInDisplay>
+  <HasPhysicsWhenWorld>false</HasPhysicsWhenWorld>
+  <RepairedInRest>true</RepairedInRest>
+  <BehaviorOnNoDurability>NotSet</BehaviorOnNoDurability>
+  <CastType>NurturingEcho</CastType>
+  <CastModifier>Immobilized</CastModifier>
+  <CastLocomotionEnabled>false</CastLocomotionEnabled>
+  <MobileCastMovementMult>-1</MobileCastMovementMult>
+  <CastSheatheRequired>1</CastSheatheRequired>
+  <OverrideSellModifier>-1</OverrideSellModifier>
+  <Tags />
+  <ExtensionsEditBehaviour>NONE</ExtensionsEditBehaviour>
+  <ItemExtensions />
+  <EffectBehaviour>Destroy</EffectBehaviour>
+  <EffectTransforms>
+    <SL_EffectTransform>
+      <TransformName>Effects</TransformName>
+      <Position xsi:nil="true" />
+      <Rotation xsi:nil="true" />
+      <Scale xsi:nil="true" />
+      <Effects>
+        <SL_Effect xsi:type="SL_ShootBlast">
+          <Delay>0</Delay>
+          <SyncType>OwnerSync</SyncType>
+          <OverrideCategory>None</OverrideCategory>
+          <CastPosition>Local</CastPosition>
+          <LocalPositionAdd>
+            <x>0</x>
+            <y>1.5</y>
+            <z>0</z>
+          </LocalPositionAdd>
+          <NoAim>false</NoAim>
+          <TargetType>Allies</TargetType>
+          <TransformName>ShooterTransform</TransformName>
+          <BaseBlast>DispersionLight</BaseBlast>
+          <Radius>15</Radius>
+          <RefreshTime>1</RefreshTime>
+          <BlastLifespan>2</BlastLifespan>
+          <InstantiatedAmount>1</InstantiatedAmount>
+          <Interruptible>false</Interruptible>
+          <MaxHitTargetCount>0</MaxHitTargetCount>
+          <AffectHitTargetCenter>true</AffectHitTargetCenter>
+          <HitOnShoot>true</HitOnShoot>
+          <IgnoreShooter>false</IgnoreShooter>
+          <IgnoreStop>false</IgnoreStop>
+          <NoTargetForwardMultiplier>0</NoTargetForwardMultiplier>
+          <ParentToShootTransform>false</ParentToShootTransform>
+          <UseTargetCharacterPositionType>false</UseTargetCharacterPositionType>
+          <ImpactSoundMaterial>Fire</ImpactSoundMaterial>
+          <DontPlayHitSound>false</DontPlayHitSound>
+          <FXIsWorld>false</FXIsWorld>
+          <PlaySounOnRefresh>false</PlaySounOnRefresh>
+          <DelayFirstShoot>0</DelayFirstShoot>
+          <PlayFXOnRefresh>false</PlayFXOnRefresh>
+          <EffectBehaviour>Destroy</EffectBehaviour>
+          <BlastEffects>
+            <SL_EffectTransform>
+              <TransformName>Effects</TransformName>
+              <Position xsi:nil="true" />
+              <Rotation xsi:nil="true" />
+              <Scale xsi:nil="true" />
+              <Effects>
+                <SL_Effect xsi:type="SL_RemoveStatusEffect">
+                  <Delay>0</Delay>
+                  <SyncType>OwnerSync</SyncType>
+                  <OverrideCategory>None</OverrideCategory>
+                  <CleanseType>NegativeStatuses</CleanseType>
+                </SL_Effect>
+                <SL_Effect xsi:type="SL_CureDisease">
+                  <Delay>0</Delay>
+                  <SyncType>OwnerSync</SyncType>
+                  <OverrideCategory>None</OverrideCategory>
+                  <CleanseType>StatusFamily</CleanseType>
+                  <SelectorValue>Disease</SelectorValue>
+                </SL_Effect>
+                <SL_Effect xsi:type="SL_RemoveStatusEffect">
+                  <Delay>0</Delay>
+                  <SyncType>OwnerSync</SyncType>
+                  <OverrideCategory>None</OverrideCategory>
+                  <CleanseType>StatusNameContains</CleanseType>
+                  <SelectorValue>Bleed</SelectorValue>
+                </SL_Effect>
+              </Effects>
+            </SL_EffectTransform>
+          </BlastEffects>
+        </SL_Effect>
+      </Effects>
+      <EffectConditions />
+      <ChildEffects />
+    </SL_EffectTransform>
+    <SL_EffectTransform>
+      <TransformName>ActivationEffects</TransformName>
+      <Position xsi:nil="true" />
+      <Rotation xsi:nil="true" />
+      <Scale xsi:nil="true" />
+      <Effects>
+        <SL_Effect xsi:type="SL_PlaySoundEffect">
+          <Delay>0.15</Delay>
+          <SyncType>OwnerSync</SyncType>
+          <OverrideCategory>None</OverrideCategory>
+          <Sounds>
+            <Sounds>SFX_SKILL_DrumSkill_NurturingEcho_Dance</Sounds>
+          </Sounds>
+          <Follow>false</Follow>
+          <MinPitch>1</MinPitch>
+          <MaxPitch>1</MaxPitch>
+        </SL_Effect>
+        <SL_Effect xsi:type="SL_PlaySoundEffect">
+          <Delay>0.15</Delay>
+          <SyncType>OwnerSync</SyncType>
+          <OverrideCategory>None</OverrideCategory>
+          <Sounds>
+            <Sounds>CS_LichGold_StaffBolt_Whoosh2</Sounds>
+          </Sounds>
+          <Follow>false</Follow>
+          <MinPitch>1</MinPitch>
+          <MaxPitch>1</MaxPitch>
+        </SL_Effect>
+      </Effects>
+      <EffectConditions />
+      <ChildEffects />
+    </SL_EffectTransform>
+  </EffectTransforms>
+  <Cooldown>30</Cooldown>
+  <StaminaCost>0</StaminaCost>
+  <ManaCost>0</ManaCost>
+  <DurabilityCost>0</DurabilityCost>
+  <DurabilityCostPercent>0</DurabilityCostPercent>
+  <VFXOnStart>true</VFXOnStart>
+  <StopStartVFXOnEnd>false</StopStartVFXOnEnd>
+  <StartVFX>VFXNurturingEcho</StartVFX>
+  <RequiredItems>
+    <SkillItemReq>
+      <ItemID>-27004</ItemID>
+      <Quantity>1</Quantity>
+      <Consume>true</Consume>
+    </SkillItemReq>
+  </RequiredItems>
+  <HealthCost>0</HealthCost>
+  <RequiredPlayerType>Normal</RequiredPlayerType>
+</SL_Skill>

@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<SL_Skill xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Target_ItemID>8100140</Target_ItemID>
+  <New_ItemID>8100140</New_ItemID>
+  <LegacyItemID xsi:nil="true" />
+  <IsPickable xsi:nil="true" />
+  <IsUsable xsi:nil="true" />
+  <QtyRemovedOnUse xsi:nil="true" />
+  <GroupItemInDisplay xsi:nil="true" />
+  <HasPhysicsWhenWorld xsi:nil="true" />
+  <RepairedInRest xsi:nil="true" />
+  <BehaviorOnNoDurability xsi:nil="true" />
+  <CastType xsi:nil="true" />
+  <CastModifier xsi:nil="true" />
+  <CastLocomotionEnabled xsi:nil="true" />
+  <MobileCastMovementMult xsi:nil="true" />
+  <CastSheatheRequired xsi:nil="true" />
+  <OverrideSellModifier xsi:nil="true" />
+  <ExtensionsEditBehaviour>NONE</ExtensionsEditBehaviour>
+  <EffectBehaviour>NONE</EffectBehaviour>
+  <EffectTransforms>
+    <SL_EffectTransform>
+      <TransformName>Rejuvenation</TransformName>
+      <Position xsi:nil="true" />
+      <Rotation xsi:nil="true" />
+      <Scale xsi:nil="true" />
+      <Effects />
+      <EffectConditions />
+      <ChildEffects>
+        <SL_EffectTransform>
+          <TransformName>ExtraEffects</TransformName>
+          <Position xsi:nil="true" />
+          <Rotation xsi:nil="true" />
+          <Scale xsi:nil="true" />
+          <Effects>
+            <SL_Effect xsi:type="SL_ShootBlast">
+              <Delay>0.4</Delay>
+              <SyncType>OwnerSync</SyncType>
+              <OverrideCategory>None</OverrideCategory>
+              <CastPosition>ProximitySkillItem</CastPosition>
+              <LocalPositionAdd>
+                <x>0</x>
+                <y>1</y>
+                <z>0</z>
+              </LocalPositionAdd>
+              <NoAim>false</NoAim>
+              <TargetType>Allies</TargetType>
+              <TransformName>ShooterTransform</TransformName>
+              <BaseBlast>DrumHealBlastSound</BaseBlast>
+              <Radius>75</Radius>
+              <RefreshTime>0.1</RefreshTime>
+              <BlastLifespan>0</BlastLifespan>
+              <InstantiatedAmount>1</InstantiatedAmount>
+              <Interruptible>false</Interruptible>
+              <MaxHitTargetCount>-1</MaxHitTargetCount>
+              <AffectHitTargetCenter>false</AffectHitTargetCenter>
+              <HitOnShoot>true</HitOnShoot>
+              <IgnoreShooter>false</IgnoreShooter>
+              <IgnoreStop>false</IgnoreStop>
+              <NoTargetForwardMultiplier>5</NoTargetForwardMultiplier>
+              <ParentToShootTransform>false</ParentToShootTransform>
+              <UseTargetCharacterPositionType>false</UseTargetCharacterPositionType>
+              <ImpactSoundMaterial>Fire</ImpactSoundMaterial>
+              <DontPlayHitSound>false</DontPlayHitSound>
+              <FXIsWorld>false</FXIsWorld>
+              <PlaySounOnRefresh>false</PlaySounOnRefresh>
+              <DelayFirstShoot>-1</DelayFirstShoot>
+              <PlayFXOnRefresh>false</PlayFXOnRefresh>
+              <EffectBehaviour>Destroy</EffectBehaviour>
+              <BlastEffects>
+                <SL_EffectTransform>
+                  <TransformName>Effects</TransformName>
+                  <Position xsi:nil="true" />
+                  <Rotation xsi:nil="true" />
+                  <Scale xsi:nil="true" />
+                  <Effects>
+                    <SL_Effect xsi:type="SL_AddStatusEffect">
+                      <Delay>0</Delay>
+                      <SyncType>OwnerSync</SyncType>
+                      <OverrideCategory>None</OverrideCategory>
+                      <StatusEffect>com.kero.status.rejuvenation</StatusEffect>
+                      <ChanceToContract>100</ChanceToContract>
+                      <AffectController>false</AffectController>
+                      <AdditionalLevel>0</AdditionalLevel>
+                      <NoDealer>false</NoDealer>
+                    </SL_Effect>
+                    <SL_Effect xsi:type="SL_PlaySoundEffect">
+                      <Delay>0</Delay>
+                      <SyncType>OwnerSync</SyncType>
+                      <OverrideCategory>None</OverrideCategory>
+                      <Sounds>
+                        <Sounds>SFX_SKILL_BoonSpell</Sounds>
+                      </Sounds>
+                      <Follow>false</Follow>
+                      <MinPitch>1</MinPitch>
+                      <MaxPitch>1</MaxPitch>
+                    </SL_Effect>
+                    <SL_Effect xsi:type="SL_PlayVFX">
+                      <Delay>0</Delay>
+                      <SyncType>OwnerSync</SyncType>
+                      <OverrideCategory>None</OverrideCategory>
+                      <VFXPrefab>VFX_RunicHeal</VFXPrefab>
+                      <HitPos>false</HitPos>
+                      <ParentMode>This</ParentMode>
+                      <DontInstantiateNew>false</DontInstantiateNew>
+                    </SL_Effect>
+                  </Effects>
+                  <EffectConditions />
+                  <ChildEffects />
+                </SL_EffectTransform>
+              </BlastEffects>
+            </SL_Effect>
+            <SL_Effect xsi:type="SL_AddStatusEffect">
+              <Delay>0</Delay>
+              <SyncType>OwnerSync</SyncType>
+              <OverrideCategory>None</OverrideCategory>
+              <StatusEffect>com.kero.status.rejuvenation</StatusEffect>
+              <ChanceToContract>100</ChanceToContract>
+              <AffectController>false</AffectController>
+              <AdditionalLevel>0</AdditionalLevel>
+              <NoDealer>false</NoDealer>
+            </SL_Effect>
+            <SL_Effect xsi:type="SL_PlaySoundEffect">
+              <Delay>0</Delay>
+              <SyncType>OwnerSync</SyncType>
+              <OverrideCategory>None</OverrideCategory>
+              <Sounds>
+                <Sounds>SFX_SKILL_BoonSpell</Sounds>
+              </Sounds>
+              <Follow>false</Follow>
+              <MinPitch>1</MinPitch>
+              <MaxPitch>1</MaxPitch>
+            </SL_Effect>
+            <SL_Effect xsi:type="SL_PlayVFX">
+              <Delay>0</Delay>
+              <SyncType>OwnerSync</SyncType>
+              <OverrideCategory>None</OverrideCategory>
+              <VFXPrefab>VFX_RunicHeal</VFXPrefab>
+              <HitPos>false</HitPos>
+              <ParentMode>This</ParentMode>
+              <DontInstantiateNew>false</DontInstantiateNew>
+            </SL_Effect>
+          </Effects>
+          <EffectConditions>
+            <SL_EffectCondition xsi:type="SL_ProximityCondition">
+              <Invert>false</Invert>
+              <RequiredItems>
+                <SkillItemReq>
+                  <ItemID>-27001</ItemID>
+                  <Quantity>1</Quantity>
+                  <Consume>false</Consume>
+                </SkillItemReq>
+              </RequiredItems>
+              <MaxDistance>20</MaxDistance>
+              <Offset>
+                <x>0</x>
+                <y>0</y>
+                <z>0</z>
+              </Offset>
+              <ProximityAngle>-1</ProximityAngle>
+              <OrMode>false</OrMode>
+            </SL_EffectCondition>
+          </EffectConditions>
+          <ChildEffects />
+        </SL_EffectTransform>
+      </ChildEffects>
+    </SL_EffectTransform>
+  </EffectTransforms>
+  <Cooldown xsi:nil="true" />
+  <StaminaCost xsi:nil="true" />
+  <ManaCost xsi:nil="true" />
+  <DurabilityCost>0</DurabilityCost>
+  <DurabilityCostPercent>0</DurabilityCostPercent>
+  <VFXOnStart>false</VFXOnStart>
+  <StopStartVFXOnEnd>false</StopStartVFXOnEnd>
+  <StartVFX>VFXForceBubble</StartVFX>
+  <RequiredItems />
+  <HealthCost>0</HealthCost>
+  <RequiredPlayerType>Normal</RequiredPlayerType>
+</SL_Skill>
