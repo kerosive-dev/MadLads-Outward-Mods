@@ -1,6 +1,6 @@
 {
   "name": "PurifierMage",
-  "version_number": "1.1.0",
+  "version_number": "1.1.1",
   "website_url": "https://github.com/thunderstore-io",
   "description": "A skill tree meant to provide healing capabilities for co-op play.",
   "dependencies": [

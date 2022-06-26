@@ -68,49 +68,13 @@
         <a>1</a>
       </Value>
     </ShaderProperty>
-    <ShaderProperty xsi:type="ColorProp">
+    <ShaderProperty xsi:type="VectorProp">
       <Name>_EmitAnimSettings</Name>
       <Value>
-        <r>181</r>
-        <g>167</g>
-        <b>104</b>
-        <a>0.7</a>
-      </Value>
-    </ShaderProperty>
-    <ShaderProperty xsi:type="ColorProp">
-      <Name>_Tan2ObjectMultOffset</Name>
-      <Value>
-        <r>181</r>
-        <g>167</g>
-        <b>104</b>
-        <a>0.7</a>
-      </Value>
-    </ShaderProperty>
-    <ShaderProperty xsi:type="ColorProp">
-      <Name>_UV_Clip_Borders</Name>
-      <Value>
-        <r>181</r>
-        <g>167</g>
-        <b>104</b>
-        <a>0.7</a>
-      </Value>
-    </ShaderProperty>
-    <ShaderProperty xsi:type="ColorProp">
-      <Name>_WorldColorSize</Name>
-      <Value>
-        <r>181</r>
-        <g>167</g>
-        <b>104</b>
-        <a>0.7</a>
-      </Value>
-    </ShaderProperty>
-    <ShaderProperty xsi:type="ColorProp">
-      <Name>bumpMapTexelSize</Name>
-      <Value>
-        <r>181</r>
-        <g>167</g>
-        <b>104</b>
-        <a>256</a>
+        <x>0.02</x>
+        <y>0.02</y>
+        <z>1</z>
+        <w>0.7</w>
       </Value>
     </ShaderProperty>
     <ShaderProperty xsi:type="FloatProp">

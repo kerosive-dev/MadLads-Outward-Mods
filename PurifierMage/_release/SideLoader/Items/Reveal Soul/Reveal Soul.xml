@@ -20,7 +20,7 @@
   <EffectBehaviour>NONE</EffectBehaviour>
   <EffectTransforms>
     <SL_EffectTransform>
-      <TransformName>Effects</TransformName>
+      <TransformName>Gift of Mana</TransformName>
       <Position xsi:nil="true" />
       <Rotation xsi:nil="true" />
       <Scale xsi:nil="true" />
@@ -107,6 +107,73 @@
           <OrMode>false</OrMode>
         </SL_EffectCondition>
       </EffectConditions>
+    </SL_EffectTransform>
+	<SL_EffectTransform>
+      <TransformName>NormalKiSynergy</TransformName>
+      <Position xsi:nil="true" />
+      <Rotation xsi:nil="true" />
+      <Scale xsi:nil="true" />
+      <Effects>
+        <SL_Effect xsi:type="SL_Summon">
+          <Delay>0</Delay>
+          <SyncType>OwnerSync</SyncType>
+          <OverrideCategory>None</OverrideCategory>
+          <Prefab>8000000</Prefab>
+          <SummonPrefabType>Item</SummonPrefabType>
+          <BufferSize>1</BufferSize>
+          <LimitOfOne>false</LimitOfOne>
+          <SummonMode>CreateNew</SummonMode>
+          <PositionType>AroundTarget</PositionType>
+          <MinDistance>0</MinDistance>
+          <MaxDistance>3</MaxDistance>
+          <SameDirectionAsSummoner>false</SameDirectionAsSummoner>
+          <SummonLocalForward>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+          </SummonLocalForward>
+          <IgnoreOnDestroy>false</IgnoreOnDestroy>
+        </SL_Effect>
+        <SL_Effect xsi:type="SL_ReduceStatusLevel">
+          <Delay>0</Delay>
+          <SyncType>OwnerSync</SyncType>
+          <OverrideCategory>None</OverrideCategory>
+          <StatusIdentifierToReduce>Ki</StatusIdentifierToReduce>
+          <ReduceAmount>3</ReduceAmount>
+        </SL_Effect>
+      </Effects>
+      <EffectConditions>
+        <SL_EffectCondition xsi:type="SL_HasStatusLevelCondition">
+          <Invert>false</Invert>
+          <StatusIdentifier>Ki</StatusIdentifier>
+          <CompareLevel>3</CompareLevel>
+          <CheckOwner>true</CheckOwner>
+          <ComparisonType>GEqual</ComparisonType>
+        </SL_EffectCondition>
+        <SL_EffectCondition xsi:type="SL_ProximitySoulSpotCondition">
+          <Invert>true</Invert>
+          <Distance>20</Distance>
+        </SL_EffectCondition>
+        <SL_EffectCondition xsi:type="SL_ProximityCondition">
+          <Invert>true</Invert>
+          <RequiredItems>
+            <SkillItemReq>
+              <ItemID>8000000</ItemID>
+              <Quantity>1</Quantity>
+              <Consume>false</Consume>
+            </SkillItemReq>
+          </RequiredItems>
+          <MaxDistance>20</MaxDistance>
+          <Offset>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+          </Offset>
+          <ProximityAngle>-1</ProximityAngle>
+          <OrMode>false</OrMode>
+        </SL_EffectCondition>
+      </EffectConditions>
+      <ChildEffects />
     </SL_EffectTransform>
   </EffectTransforms>
   <Cooldown xsi:nil="true" />

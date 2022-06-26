@@ -45,6 +45,7 @@ Using skills in conjunction with the Sigil of Life will have the aforementioned 
 
 ------------CHANGELOG--------------
 
+v1.1.1 - Added compatability with the Mendicants mod
 v1.1.0 - Modified how healing light & cleansing ritual worked. Removed bleed removal from healing light, added to cleansing ritual, cleansing ritual should now also heal more. Healing light should also find its target more reliably.
 v1.0.2 - Markdown edits  
 v1.0.1 - Fix for file structure, oops.

@@ -1,52 +1,51 @@
 ﻿using BepInEx;
-using BepInEx.Configuration;
 using BepInEx.Logging;
 using HarmonyLib;
-using SideLoader;
 using UnityEngine;
-using BeastMaster;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using UnityEngine.SceneManagement;
 
-// RENAME 'OutwardModTemplate' TO SOMETHING ELSE
 namespace BeastMaster
 {
     [BepInPlugin(GUID, NAME, VERSION)]
-    public class BeastMaster : BaseUnityPlugin
+    public partial class BeastMaster : BaseUnityPlugin
     {
-        // Choose a GUID for your project. Change "myname" and "mymod".
         public const string GUID = "madlads.beastMaster";
-        // Choose a NAME for your project, generally the same as your Assembly Name.
         public const string NAME = "BeastMaster";
-        // Increment the VERSION when you release a new version of your mod.
-        public const string VERSION = "0.0.1";
+        public const string VERSION = "1.0.0";
 
-        // For accessing your BepInEx Logger from outside of this class (eg Plugin.Log.LogMessage("");)
+        public static bool Debug = true;
+
         internal static ManualLogSource Log;
+        public static Canvas MainCanvas
+        {
+            get; private set;
+        }
+       
+        public static PetManager PetManager
+        {
+            get; private set;
+        }
 
-        // If you need settings, define them like so:
-        public static ConfigEntry<bool> ExampleConfig;
+
+        public static string RootFolder;
+
 
         // Awake is called when your plugin is created. Use this to set up your mod.
         internal void Awake()
         {
             Log = this.Logger;
-            Log.LogMessage($"Hello world from {NAME} {VERSION}!");
-
-            // Any config settings you define should be set up like this:
-            ExampleConfig = Config.Bind("ExampleCategory", "ExampleSetting", false, "This is an example setting.");
-
-            // Harmony is for patching methods. If you're not patching anything, you can comment-out or delete this line.
+            RootFolder = this.Info.Location.Replace("BeastMaster.dll", "");
+            PetManager = new PetManager(RootFolder);
+            SceneManager.sceneLoaded += SceneManager_sceneLoaded;
             new Harmony(GUID).PatchAll();
         }
 
-        // Update is called once per frame. Use this only if needed.
-        // You also have all other MonoBehaviour methods available (OnGUI, etc)
-        internal void Update()
+        private void SceneManager_sceneLoaded(Scene Scene, LoadSceneMode LoadMode)
         {
-
+            if (Scene.name == "MainMenu_Empty")
+            {
+                PetManager.DestroyAllPetInstances();
+            }
         }
     }
 }
