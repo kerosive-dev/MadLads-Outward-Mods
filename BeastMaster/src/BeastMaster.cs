@@ -16,8 +16,13 @@ namespace BeastMaster
         public const string NAME = "BeastMaster";
         public const string VERSION = "1.0.0";
 
+        internal static ManualLogSource Log;
+
         internal void Awake()
         {
+            Log = this.Logger;
+            Log.LogMessage($"{NAME} {VERSION} loading...");
+
             SL.OnPacksLoaded += SL_OnPacksLoaded;
 
             var harmony = new Harmony(GUID);

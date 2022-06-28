@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using SideLoader;
 
-
 namespace BeastMaster
 {
     public class SummonPet : SpawnSLCharacter
@@ -16,7 +15,6 @@ namespace BeastMaster
 
         public override void ActivateLocally(Character _affectedCharacter, object[] _infos)
         {
-
             // custom health & mana cost for casting
             _affectedCharacter.Stats.UseBurntHealth = false;
             float healthcost = 0.5f * _affectedCharacter.Stats.MaxHealth;
@@ -31,9 +29,10 @@ namespace BeastMaster
             if (!PhotonNetwork.isNonMasterClientInRoom)
             {
                 var template = PetManager.Rhino;
+
                 this.SLCharacter_UID = template.UID;
 
-                SL.Log(this.SLCharacter_UID); ;
+                BeastMaster.Log.LogMessage($"Logging the templates : {CustomCharacters.Templates}");
 
                 CustomCharacters.Templates.TryGetValue(this.SLCharacter_UID, out charTemplate);
 

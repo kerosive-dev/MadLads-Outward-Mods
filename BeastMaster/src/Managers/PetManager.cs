@@ -10,9 +10,11 @@ namespace BeastMaster
 
         internal static void Init()
         {
+            BeastMaster.Log.LogMessage("Getting the template!");
             var pack = SL.GetSLPack("madlads-beastmasterClass");
 
             Rhino = pack.CharacterTemplates["beastmaster.testpet"];
+            BeastMaster.Log.LogMessage($"This is the UID : {Rhino.UID}");
             Rhino.OnSpawn += OnPetSpawn;
         }
 

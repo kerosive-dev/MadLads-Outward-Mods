@@ -2,7 +2,7 @@
 
 namespace BeastMaster
 {
-    internal class SkillManager
+    public class SkillManager
     {
         public static void Init()
         {
@@ -14,18 +14,19 @@ namespace BeastMaster
             SetupSummonPet();
         }
 
+        #region SummonPet
         public static void SetupSummonPet()
         {
-            var summon = ResourcesPrefabManager.Instance.GetItemPrefab(-27999) as Skill;
+            var summonPet = ResourcesPrefabManager.Instance.GetItemPrefab(-27999) as Skill;
 
             // destroy the existing skills, but keep the rest (VFX / Sound).
-            GameObject.DestroyImmediate(summon.transform.Find("Lightning").gameObject);
-            GameObject.DestroyImmediate(summon.transform.Find("SummonSoul").gameObject);
+            GameObject.DestroyImmediate(summonPet.transform.Find("Lightning").gameObject);
+            GameObject.DestroyImmediate(summonPet.transform.Find("SummonSoul").gameObject);
 
             var effects = new GameObject("Effects");
-            effects.transform.parent = summon.transform;
+            effects.transform.parent = summonPet.transform;
             effects.AddComponent<SummonPet>();
-
         }
+        #endregion
     }
 }
