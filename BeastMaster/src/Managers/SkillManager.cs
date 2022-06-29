@@ -25,7 +25,9 @@ namespace BeastMaster
 
             var effects = new GameObject("Effects");
             effects.transform.parent = summonPet.transform;
-            effects.AddComponent<SummonPet>();
+
+            SummonPet summonPetEffect = effects.AddComponent<SummonPet>();
+            summonPetEffect.SLCharacter_UID = "beastmaster.testpet";
         }
         #endregion
     }

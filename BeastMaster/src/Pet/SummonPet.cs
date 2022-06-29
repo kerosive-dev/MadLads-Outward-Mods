@@ -29,15 +29,10 @@ namespace BeastMaster
             if (!PhotonNetwork.isNonMasterClientInRoom)
             {
                 var template = PetManager.Rhino;
-
                 this.SLCharacter_UID = template.UID;
 
-                BeastMaster.Log.LogMessage($"Logging the templates : {CustomCharacters.Templates}");
-
                 CustomCharacters.Templates.TryGetValue(this.SLCharacter_UID, out charTemplate);
-
                 this.ExtraRpcData = _affectedCharacter.UID.ToString();
-
                 base.ActivateLocally(_affectedCharacter, _infos);
             }
         }

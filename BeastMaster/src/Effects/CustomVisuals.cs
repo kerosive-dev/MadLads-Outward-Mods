@@ -44,9 +44,8 @@ namespace BeastMaster
 
             public override void ActivateLocally(Character _affectedCharacter, object[] _infos)
             {
-                customVisuals = _affectedCharacter.GetComponent<CharacterVisuals>();
                 CharacterVisuals Prefab = OutwardHelpers.GetFromAssetBundle<CharacterVisuals>(SLPackName, AssetBundleName, PrefabName);
-                customVisuals = Prefab;
+                _affectedCharacter.m_visualsHolder = Prefab;
             }
         }
     }

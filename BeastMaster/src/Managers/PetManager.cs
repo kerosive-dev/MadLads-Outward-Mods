@@ -10,11 +10,9 @@ namespace BeastMaster
 
         internal static void Init()
         {
-            BeastMaster.Log.LogMessage("Getting the template!");
             var pack = SL.GetSLPack("madlads-beastmasterClass");
 
             Rhino = pack.CharacterTemplates["beastmaster.testpet"];
-            BeastMaster.Log.LogMessage($"This is the UID : {Rhino.UID}");
             Rhino.OnSpawn += OnPetSpawn;
         }
 
@@ -25,6 +23,8 @@ namespace BeastMaster
             if (!PhotonNetwork.isNonMasterClientInRoom)
             {
                 var owner = CharacterManager.Instance.GetCharacter(charUID);
+                /*CharacterVisuals petPrefab = OutwardHelpers.GetFromAssetBundle<CharacterVisuals>("madlads-beastmasterClass", "madlad-pets", "Rhino");
+                petCharacter.m_visualsHolder = petPrefab;*/
 
                 var tele = petCharacter.gameObject.AddComponent<PetTeleport>();
                 tele.m_character = petCharacter;
